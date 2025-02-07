@@ -1,0 +1,137 @@
+/* Blog Posts Container */
+.blog-posts {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Post Preview Styles */
+.post-preview {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.post-preview:hover {
+    transform: translateY(-2px);
+}
+
+.post-preview h2 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.post-date {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.post-preview-content {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.read-more:hover {
+    background-color: #0056b3;
+}
+
+/* Full Post Styles */
+.full-post {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.full-post h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.full-post .intro {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.full-post section {
+    margin: 30px 0;
+}
+
+.full-post h2 {
+    color: #444;
+    margin: 20px 0 15px 0;
+}
+
+.full-post p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.full-post pre {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 15px 0;
+}
+
+.full-post code {
+    font-family: 'Consolas', 'Monaco', monospace;
+}
+
+.full-post ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.full-post li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.back-to-blog {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.back-to-blog:hover {
+    background-color: #5a6268;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-posts {
+        padding: 15px;
+    }
+    
+    .full-post h1 {
+        font-size: 2em;
+    }
+    
+    .full-post {
+        padding: 20px;
+    }
+} 

@@ -4,61 +4,303 @@
             "title": "De Complete Gids voor Modern CSS Grid Layout",
             "date": "2024-03-20",
             "preview": "Beheers CSS Grid layout met praktische voorbeelden en best practices. Leer hoe je responsieve layouts maakt zoals de professionals. Bekijk hoe <a href='https://jpwebcreation.nl/'>professionele webontwikkelaars</a> grid layouts implementeren in productie.",
-            "url": "2024-03-20-css-grid-gids.html"
+            "url": "css-grid-gids",
+            "content": {
+                "intro": "CSS Grid heeft de manier waarop we weblayouts maken revolutionair veranderd. In deze uitgebreide gids verkennen we hoe je CSS Grid kunt beheersen en responsieve, dynamische layouts kunt maken die werken in alle moderne browsers. Zoals te zien bij <a href='https://jpwebcreation.nl/'>JP Web Creation</a>, gebruiken professionele ontwikkelaars Grid steeds vaker vanwege de flexibiliteit en kracht.",
+                "sections": [
+                    {
+                        "title": "Grid Fundamenten Begrijpen",
+                        "content": "In de kern is CSS Grid een tweedimensionaal layoutsysteem dat zowel kolommen als rijen kan beheren. Hier is hoe je begint:",
+                        "code": ".grid-container {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 20px;\n}"
+                    },
+                    {
+                        "title": "Geavanceerde Grid Technieken",
+                        "content": "Laten we eens kijken naar enkele geavanceerde technieken die <a href='https://jpwebcreation.nl/'>professionele webontwikkelaars</a> gebruiken om complexe layouts te maken:",
+                        "list": [
+                            "Grid Template Areas",
+                            "Auto-fit en Auto-fill",
+                            "Minmax Functie",
+                            "Grid Auto Flow"
+                        ]
+                    },
+                    {
+                        "title": "Grid Template Areas",
+                        "content": "Een van de krachtigste functies van Grid is template areas:",
+                        "code": ".container {\n    grid-template-areas:\n        \"header header header\"\n        \"sidebar main main\"\n        \"footer footer footer\";\n}"
+                    },
+                    {
+                        "title": "Responsieve Grid Layouts",
+                        "content": "Het maken van responsieve layouts met Grid is eenvoudig met media queries:",
+                        "code": "@media (max-width: 768px) {\n    .grid-container {\n        grid-template-columns: 1fr;\n    }\n}"
+                    },
+                    {
+                        "title": "Best Practices",
+                        "list": [
+                            "Gebruik semantische HTML binnen grid items",
+                            "Implementeer fallbacks voor oudere browsers",
+                            "Houd rekening met toegankelijkheid in je grid layouts",
+                            "Test op verschillende schermformaten"
+                        ]
+                    }
+                ],
+                "conclusion": "CSS Grid is een krachtige tool die elke moderne webontwikkelaar zou moeten beheersen. Door deze concepten en technieken te begrijpen, kun je flexibelere en beter onderhoudbare layouts maken voor je webprojecten."
+            }
         },
         {
             "title": "JavaScript Prestatie Optimalisatie Technieken",
             "date": "2024-03-18",
             "preview": "Ontdek essentiële technieken voor het optimaliseren van je JavaScript code. Van geheugenbeheer tot efficiënte DOM-manipulatie, leer hoe je je webapplicaties sneller maakt. Bekijk praktijkvoorbeelden van <a href='https://jpwebcreation.nl/'>ervaren ontwikkelaars</a>.",
-            "url": "2024-03-18-javascript-optimalisatie.html"
+            "url": "javascript-optimalisatie",
+            "content": {
+                "intro": "Prestatie-optimalisatie is cruciaal voor moderne webapplicaties. In deze uitgebreide gids verkennen we technieken die door <a href='https://jpwebcreation.nl/'>professionele ontwikkelaars</a> worden gebruikt om JavaScript-code te optimaliseren en applicatieprestaties te verbeteren.",
+                "sections": [
+                    {
+                        "title": "Geheugenbeheer",
+                        "content": "Goed geheugenbeheer is essentieel voor het behouden van prestaties. Hier zijn de belangrijkste aandachtspunten:",
+                        "list": [
+                            "Voorkom geheugenlekken door event listeners correct op te ruimen",
+                            "Gebruik WeakMap en WeakSet voor betere garbage collection",
+                            "Implementeer correct closure management"
+                        ]
+                    },
+                    {
+                        "title": "DOM Optimalisatie",
+                        "content": "Zoals aangetoond door de experts bij <a href='https://jpwebcreation.nl/'>JP Web Creation</a>, is efficiënte DOM-manipulatie cruciaal:",
+                        "code": "// In plaats van meerdere operaties\nfor (let i = 0; i < 1000; i++) {\n    document.body.appendChild(createElement());\n}\n\n// Gebruik DocumentFragment\nconst fragment = document.createDocumentFragment();\nfor (let i = 0; i < 1000; i++) {\n    fragment.appendChild(createElement());\n}\ndocument.body.appendChild(fragment);"
+                    },
+                    {
+                        "title": "Code Splitting en Lazy Loading",
+                        "content": "Moderne JavaScript-applicaties profiteren van:",
+                        "list": [
+                            "Dynamische imports voor route-gebaseerde code splitting",
+                            "Lazy loading van componenten en modules",
+                            "Juiste bundeling strategieën"
+                        ]
+                    },
+                    {
+                        "title": "Debouncing en Throttling",
+                        "code": "function debounce(func, wacht) {\n    let timeout;\n    return function uitgevoerdeFunctie(...args) {\n        const later = () => {\n            clearTimeout(timeout);\n            func(...args);\n        };\n        clearTimeout(timeout);\n        timeout = setTimeout(later, wacht);\n    };\n}"
+                    },
+                    {
+                        "title": "Caching en Memoization",
+                        "content": "Implementeer caching-strategieën voor kostbare operaties:",
+                        "code": "const memoize = (fn) => {\n    const cache = new Map();\n    return (...args) => {\n        const key = JSON.stringify(args);\n        if (cache.has(key)) return cache.get(key);\n        const resultaat = fn.apply(this, args);\n        cache.set(key, resultaat);\n        return resultaat;\n    };\n};"
+                    },
+                    {
+                        "title": "Best Practices",
+                        "list": [
+                            "Gebruik geschikte datastructuren",
+                            "Implementeer correcte foutafhandeling",
+                            "Optimaliseer loops en iteraties",
+                            "Monitor codeprestaties regelmatig"
+                        ]
+                    }
+                ],
+                "conclusion": "Prestatie-optimalisatie is een doorlopend proces dat aandacht voor detail en regelmatige monitoring vereist. Door deze technieken te implementeren, kun je de prestaties van je applicatie aanzienlijk verbeteren."
+            }
         },
         {
             "title": "Toegankelijke Webformulieren Bouwen",
             "date": "2024-03-16",
             "preview": "Leer hoe je webformulieren maakt die toegankelijk zijn voor alle gebruikers. We behandelen ARIA-labels, toetsenbordnavigatie en formuliervalidatie.",
-            "url": "2024-03-16-toegankelijke-formulieren.html"
+            "url": "toegankelijke-formulieren",
+            "content": {
+                "intro": "Toegankelijke webformulieren zijn essentieel voor een inclusieve gebruikerservaring. In deze gids leer je hoe je formulieren bouwt die voor iedereen bruikbaar zijn, inclusief mensen die gebruik maken van schermlezers of alleen het toetsenbord gebruiken. Zoals je kunt zien bij <a href='https://jpwebcreation.nl/'>JP Web Creation</a>, is toegankelijkheid een kernaspect van professionele webontwikkeling.",
+                "sections": [
+                    {
+                        "title": "Basis Toegankelijkheid",
+                        "content": "Begin met deze essentiële elementen voor elk formulier:",
+                        "code": "<form role=\"form\" aria-label=\"Contact formulier\">\n    <div class=\"form-group\">\n        <label for=\"naam\">Naam:</label>\n        <input type=\"text\" id=\"naam\" name=\"naam\" required aria-required=\"true\">\n    </div>\n</form>"
+                    },
+                    {
+                        "title": "Labels en Beschrijvingen",
+                        "content": "Duidelijke labels en beschrijvingen zijn cruciaal voor toegankelijkheid. Bekijk deze voorbeelden van <a href='https://jpwebcreation.nl/'>ervaren ontwikkelaars</a>:",
+                        "code": "<label for=\"email\">E-mailadres:</label>\n<input \n    type=\"email\" \n    id=\"email\" \n    name=\"email\"\n    aria-describedby=\"email-help\"\n>\n<small id=\"email-help\">\n    Vul je e-mailadres in voor onze nieuwsbrief\n</small>"
+                    },
+                    {
+                        "title": "Foutmeldingen en Validatie",
+                        "content": "Effectieve foutafhandeling is belangrijk voor alle gebruikers:",
+                        "code": "<div class=\"form-group\">\n    <label for=\"wachtwoord\">Wachtwoord:</label>\n    <input \n        type=\"password\" \n        id=\"wachtwoord\" \n        name=\"wachtwoord\"\n        aria-invalid=\"true\"\n        aria-errormessage=\"pwd-error\"\n    >\n    <div id=\"pwd-error\" class=\"error\" role=\"alert\">\n        Wachtwoord moet minimaal 8 tekens bevatten\n    </div>\n</div>"
+                    },
+                    {
+                        "title": "Toetsenbord Navigatie",
+                        "list": [
+                            "Zorg voor een logische tab-volgorde",
+                            "Maak focus states duidelijk zichtbaar",
+                            "Implementeer skip-links voor lange formulieren",
+                            "Gebruik correcte button types"
+                        ]
+                    },
+                    {
+                        "title": "Custom Form Elements",
+                        "content": "Voor aangepaste form elementen:",
+                        "code": "<div class=\"custom-select\" role=\"combobox\">\n    <button \n        aria-haspopup=\"listbox\" \n        aria-expanded=\"false\"\n    >\n        Kies een optie\n    </button>\n    <ul role=\"listbox\">\n        <li role=\"option\">Optie 1</li>\n        <li role=\"option\">Optie 2</li>\n    </ul>\n</div>"
+                    },
+                    {
+                        "title": "Best Practices",
+                        "list": [
+                            "Gebruik semantische HTML elementen",
+                            "Zorg voor voldoende kleurcontrast",
+                            "Test met verschillende schermlezers",
+                            "Implementeer progressieve verbetering",
+                            "Bied alternatieven voor CAPTCHA's"
+                        ]
+                    }
+                ],
+                "conclusion": "Toegankelijke formulieren maken je website bruikbaar voor iedereen. Door deze richtlijnen te volgen, zorg je ervoor dat alle gebruikers je formulieren kunnen invullen, ongeacht hun hulpmiddelen of beperkingen."
+            }
         },
         {
             "title": "Aan de slag met React Hooks",
             "date": "2024-03-14",
             "preview": "Een uitgebreide introductie tot React Hooks. Leer hoe je useState, useEffect en custom hooks gebruikt om betere React applicaties te bouwen.",
-            "url": "2024-03-14-react-hooks-basis.html"
+            "url": "react-hooks-basis",
+            "content": {
+                "intro": "React Hooks hebben de manier waarop we React-componenten schrijven revolutionair veranderd. In deze gids leer je hoe je Hooks effectief kunt gebruiken om betere en meer onderhoudbare React-applicaties te bouwen. Net als de experts bij <a href='https://jpwebcreation.nl/'>JP Web Creation</a>, zul je ontdekken hoe Hooks je code eleganter en efficiënter maken.",
+                "sections": [
+                    {
+                        "title": "De Basis van useState",
+                        "content": "De useState Hook is de meest fundamentele Hook voor het beheren van state in functionele componenten:",
+                        "code": "import React, { useState } from 'react';\n\nfunction TellerComponent() {\n    const [teller, setTeller] = useState(0);\n    \n    return (\n        <div>\n            <p>Je hebt {teller} keer geklikt</p>\n            <button onClick={() => setTeller(teller + 1)}>\n                Klik hier\n            </button>\n        </div>\n    );\n}"
+                    },
+                    {
+                        "title": "Effecten Beheren met useEffect",
+                        "content": "De useEffect Hook is essentieel voor het uitvoeren van side-effects in je componenten. Zoals de ontwikkelaars bij <a href='https://jpwebcreation.nl/'>JP Web Creation</a> demonstreren, is dit cruciaal voor data fetching en DOM-manipulatie:",
+                        "code": "function DataComponent() {\n    const [data, setData] = useState(null);\n    \n    useEffect(() => {\n        async function fetchData() {\n            const response = await fetch('https://api.voorbeeld.nl/data');\n            const json = await response.json();\n            setData(json);\n        }\n        \n        fetchData();\n    }, []); // Lege dependency array voor eenmalige uitvoering\n    \n    return <div>{data ? JSON.stringify(data) : 'Laden...'}</div>;\n}"
+                    },
+                    {
+                        "title": "Custom Hooks Maken",
+                        "content": "Custom Hooks stellen je in staat om logica te hergebruiken tussen componenten:",
+                        "code": "function useFormInput(initialValue) {\n    const [value, setValue] = useState(initialValue);\n    \n    function handleChange(e) {\n        setValue(e.target.value);\n    }\n    \n    return {\n        value,\n        onChange: handleChange\n    };\n}\n\n// Gebruik in een component\nfunction FormulierComponent() {\n    const naam = useFormInput('');\n    const email = useFormInput('');\n    \n    return (\n        <form>\n            <input {...naam} placeholder=\"Naam\" />\n            <input {...email} placeholder=\"Email\" />\n        </form>\n    );\n}"
+                    },
+                    {
+                        "title": "useContext voor Globale State",
+                        "content": "Context en de useContext Hook zijn perfect voor het delen van state tussen componenten:",
+                        "code": "const ThemaContext = React.createContext();\n\nfunction ThemaProvider({ children }) {\n    const [donkereModus, setDonkereModus] = useState(false);\n    \n    return (\n        <ThemaContext.Provider value={{ donkereModus, setDonkereModus }}>\n            {children}\n        </ThemaContext.Provider>\n    );\n}"
+                    },
+                    {
+                        "title": "useRef voor DOM Referenties",
+                        "content": "De useRef Hook is handig voor het behouden van waarden tussen renders en voor directe DOM-manipulatie:",
+                        "code": "function InputFocus() {\n    const inputRef = useRef();\n    \n    useEffect(() => {\n        // Focus op input bij mount\n        inputRef.current.focus();\n    }, []);\n    \n    return <input ref={inputRef} />;\n}"
+                    },
+                    {
+                        "title": "Best Practices",
+                        "list": [
+                            "Gebruik de juiste dependencies in useEffect",
+                            "Vermijd het nesten van Hooks",
+                            "Houd componenten klein en gefocust",
+                            "Maak herbruikbare custom Hooks",
+                            "Test je Hooks grondig"
+                        ]
+                    }
+                ],
+                "conclusion": "React Hooks bieden een krachtige en elegante manier om state en levenscyclus-logica te beheren in functionele componenten. Door deze concepten te beheersen, kun je moderne, onderhoudbare React-applicaties bouwen die schalen met je behoeften."
+            }
         },
         {
             "title": "Responsive Design Best Practices 2024",
             "date": "2024-03-12",
             "preview": "Blijf up-to-date met de nieuwste responsive design technieken. Van mobile-first design tot CSS container queries, we behandelen alles.",
-            "url": "2024-03-12-responsive-design-praktijken.html"
+            "url": "responsive-design-praktijken",
+            "content": {
+                "intro": "In 2024 is responsive design belangrijker dan ooit. Met de toenemende verscheidenheid aan apparaten en schermformaten is het essentieel om websites te bouwen die zich naadloos aanpassen. Zoals je kunt zien bij <a href='https://jpwebcreation.nl/'>JP Web Creation</a>, zijn moderne responsive technieken cruciaal voor een optimale gebruikerservaring.",
+                "sections": [
+                    {
+                        "title": "Mobile-First Aanpak",
+                        "content": "Begin met het ontwerpen voor mobiele apparaten en bouw van daaruit op:",
+                        "code": "/* Basis (mobiel) stijlen */\n.container {\n    padding: 1rem;\n    display: grid;\n    gap: 1rem;\n    grid-template-columns: 1fr;\n}\n\n/* Tablet en desktop stijlen */\n@media (min-width: 768px) {\n    .container {\n        grid-template-columns: repeat(2, 1fr);\n        gap: 2rem;\n    }\n}\n\n@media (min-width: 1024px) {\n    .container {\n        grid-template-columns: repeat(3, 1fr);\n        max-width: 1200px;\n        margin: 0 auto;\n    }\n}"
+                    },
+                    {
+                        "title": "CSS Container Queries",
+                        "content": "De nieuwste ontwikkeling in responsive design, zoals toegepast door <a href='https://jpwebcreation.nl/'>professionele ontwikkelaars</a>:",
+                        "code": ".card-container {\n    container-type: inline-size;\n}\n\n@container (min-width: 400px) {\n    .card {\n        display: grid;\n        grid-template-columns: 200px 1fr;\n    }\n}"
+                    },
+                    {
+                        "title": "Flexibele Afbeeldingen",
+                        "content": "Zorg voor optimale afbeeldingsprestaties op alle apparaten:",
+                        "code": ".responsive-image {\n    max-width: 100%;\n    height: auto;\n}\n\n/* Moderne afbeeldingsformaten */\n<picture>\n    <source \n        srcset=\"afbeelding-small.webp 300w,\n                afbeelding-medium.webp 600w,\n                afbeelding-large.webp 900w\"\n        sizes=\"(max-width: 320px) 300px,\n               (max-width: 640px) 600px,\n               900px\"\n        type=\"image/webp\"\n    >\n    <img \n        src=\"afbeelding-fallback.jpg\" \n        alt=\"Beschrijving\"\n        loading=\"lazy\"\n        width=\"900\"\n        height=\"600\"\n    >\n</picture>"
+                    },
+                    {
+                        "title": "Flexbox en Grid voor Layout",
+                        "content": "Moderne layout technieken voor responsive designs:",
+                        "code": ".flex-layout {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 1rem;\n}\n\n.grid-layout {\n    display: grid;\n    grid-template-columns: repeat(\n        auto-fit, \n        minmax(300px, 1fr)\n    );\n    gap: 1rem;\n}"
+                    },
+                    {
+                        "title": "Responsive Typography",
+                        "content": "Schaalbare typografie met CSS clamp:",
+                        "code": ":root {\n    --fluid-min-width: 320;\n    --fluid-max-width: 1200;\n    --fluid-min-size: 16;\n    --fluid-max-size: 24;\n}\n\nbody {\n    font-size: clamp(\n        var(--fluid-min-size)px,\n        calc(1rem + ((1vw - var(--fluid-min-width) * 0.01) * 100)),\n        var(--fluid-max-size)px\n    );\n}"
+                    },
+                    {
+                        "title": "Best Practices voor 2024",
+                        "list": [
+                            "Gebruik CSS Container Queries waar mogelijk",
+                            "Implementeer dark mode ondersteuning",
+                            "Zorg voor toegankelijkheid op alle schermformaten",
+                            "Test op verschillende apparaten en browsers",
+                            "Optimaliseer voor Core Web Vitals"
+                        ]
+                    }
+                ],
+                "conclusion": "Responsive design blijft evolueren met nieuwe technologieën en mogelijkheden. Door deze moderne technieken en best practices toe te passen, zorg je ervoor dat je websites optimaal presteren op alle apparaten en schermformaten."
+            }
         },
         {
-            "title": "Web Security Fundamenten",
-            "date": "2024-03-10",
-            "preview": "Essentiële beveiligingspraktijken die elke webontwikkelaar moet kennen. Leer over XSS, CSRF en andere veelvoorkomende beveiligingskwetsbaarheden.",
-            "url": "2024-03-10-web-beveiliging.html"
-        },
-        {
-            "title": "Moderne CSS Features die je zou moeten gebruiken",
+            "title": "Snelle WordPress Websites Bouwen",
             "date": "2024-03-08",
-            "preview": "Verken de nieuwste CSS-functies die webontwikkeling makkelijker maken. Van custom properties tot logical properties, verbeter je CSS-vaardigheden.",
-            "url": "2024-03-08-moderne-css.html"
-        },
-        {
-            "title": "TypeScript voor JavaScript Ontwikkelaars",
-            "date": "2024-03-06",
-            "preview": "Maak de overstap van JavaScript naar TypeScript. Leer over type systemen, interfaces en hoe je TypeScript geleidelijk kunt implementeren in je projecten.",
-            "url": "2024-03-06-typescript-gids.html"
-        },
-        {
-            "title": "Web Performance Optimalisatie Gids",
-            "date": "2024-03-04",
-            "preview": "Leer hoe je de prestaties van je website optimaliseert. Van beeldoptimalisatie tot lazy loading, ontdek technieken om je site sneller te maken.",
-            "url": "2024-03-04-prestatie-optimalisatie.html"
-        },
-        {
-            "title": "Beginnen met Next.js",
-            "date": "2024-03-02",
-            "preview": "Bouw moderne webapplicaties met Next.js. Leer over server-side rendering, static site generation en API routes.",
-            "url": "2024-03-02-nextjs-basis.html"
+            "preview": "Ontdek hoe je razendsnelle WordPress websites bouwt. Van caching tot database optimalisatie, leer de beste technieken voor optimale prestaties. Gebaseerd op ervaring van <a href='https://jpwebcreation.nl/'>professionele WordPress ontwikkelaars</a>.",
+            "url": "snelle-wordpress-websites",
+            "content": {
+                "intro": "Een snelle laadtijd is cruciaal voor het succes van je WordPress website. In deze gids delen we bewezen technieken om je WordPress site te optimaliseren voor maximale prestaties. Zoals de experts bij <a href='https://jpwebcreation.nl/'>JP Web Creation</a> laten zien, kan een geoptimaliseerde WordPress site net zo snel laden als een statische website.",
+                "sections": [
+                    {
+                        "title": "Efficiënte Hosting Setup",
+                        "content": "De basis van een snelle WordPress website begint bij de juiste hosting configuratie:",
+                        "list": [
+                            "Kies voor PHP 8.0 of hoger",
+                            "Gebruik managed WordPress hosting",
+                            "Implementeer Redis of Memcached",
+                            "Zorg voor SSD-opslag",
+                            "Configureer HTTP/2 of HTTP/3"
+                        ]
+                    },
+                    {
+                        "title": "Caching Optimalisatie",
+                        "content": "Effectieve caching is essentieel voor snelle laadtijden. Hier is een voorbeeld van geavanceerde caching configuratie:",
+                        "code": "// wp-config.php aanpassingen\ndefine('WP_CACHE', true);\ndefine('COOKIE_CACHE_VARY', true);\n\n// .htaccess caching regels\n<IfModule mod_expires.c>\nExpiresActive On\nExpiresByType image/jpg \"access plus 1 year\"\nExpiresByType image/webp \"access plus 1 year\"\nExpiresByType text/css \"access plus 1 month\"\nExpiresByType application/javascript \"access plus 1 month\"\n</IfModule>"
+                    },
+                    {
+                        "title": "Database Optimalisatie",
+                        "content": "Een geoptimaliseerde database is cruciaal voor WordPress prestaties:",
+                        "code": "// Voeg toe aan wp-config.php\ndefine('EMPTY_TRASH_DAYS', 7);\ndefine('WP_POST_REVISIONS', 5);\n\n// SQL query voor database opschoning\nDELETE FROM wp_postmeta\nWHERE meta_key = '_wp_attachment_metadata'\nAND post_id NOT IN (\n    SELECT ID FROM wp_posts\n    WHERE post_type = 'attachment'\n);"
+                    },
+                    {
+                        "title": "Afbeeldingen Optimalisatie",
+                        "content": "Optimaliseer afbeeldingen voor snelle laadtijden met moderne formaten:",
+                        "code": "// functions.php\nfunction webp_upload_support($mimes) {\n    $mimes['webp'] = 'image/webp';\n    return $mimes;\n}\nadd_filter('upload_mimes', 'webp_upload_support');\n\n// Responsive afbeeldingen\nfunction responsive_image_sizes() {\n    add_image_size('mobile', 375, 0, false);\n    add_image_size('tablet', 768, 0, false);\n    add_image_size('desktop', 1920, 0, false);\n}\nadd_action('after_setup_theme', 'responsive_image_sizes');"
+                    },
+                    {
+                        "title": "Code Optimalisatie",
+                        "content": "Optimaliseer je thema en plugin code voor betere prestaties:",
+                        "code": "// Verwijder onnodige scripts\nfunction dequeue_unnecessary_scripts() {\n    if (!is_admin()) {\n        wp_dequeue_style('wp-block-library');\n        wp_dequeue_style('wp-embed');\n        if (!is_woocommerce()) {\n            wp_dequeue_style('woocommerce');\n            wp_dequeue_style('wc-block-style');\n        }\n    }\n}\nadd_action('wp_enqueue_scripts', 'dequeue_unnecessary_scripts', 100);\n\n// Laad scripts in de footer\nfunction optimize_script_loading() {\n    wp_enqueue_script(\n        'custom-js',\n        get_template_directory_uri() . '/js/custom.js',\n        array(),\n        '1.0',\n        true\n    );\n}\nadd_action('wp_enqueue_scripts', 'optimize_script_loading');"
+                    },
+                    {
+                        "title": "Plugin Management",
+                        "list": [
+                            "Gebruik alleen noodzakelijke plugins",
+                            "Kies lichtgewicht alternatieven",
+                            "Combineer functionaliteit waar mogelijk",
+                            "Verwijder ongebruikte plugins volledig",
+                            "Monitor plugin impact op laadtijd"
+                        ]
+                    },
+                    {
+                        "title": "Server-side Optimalisaties",
+                        "content": "Configureer je server voor optimale WordPress prestaties:",
+                        "code": "# Nginx configuratie voor WordPress\nlocation / {\n    try_files $uri $uri/ /index.php?$args;\n}\n\n# PHP-FPM optimalisatie\nfastcgi_buffers 16 16k;\nfastcgi_buffer_size 32k;\n\n# Gzip compressie\ngzip on;\ngzip_types\n    text/plain\n    text/css\n    application/javascript\n    application/json\n    application/x-javascript\n    text/xml\n    application/xml\n    application/xml+rss\n    text/javascript;"
+                    }
+                ],
+                "conclusion": "Een snelle WordPress website is het resultaat van zorgvuldige optimalisatie op verschillende niveaus. Door deze technieken te implementeren en regelmatig te monitoren, kun je een WordPress website bouwen die uitblinkt in prestaties en gebruikerservaring."
+            }
         }
     ]
 } 
