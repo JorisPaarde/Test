@@ -1,0 +1,64 @@
+{
+    "posts": [
+        {
+            "title": "De Complete Gids voor Modern CSS Grid Layout",
+            "date": "2024-03-20",
+            "preview": "Beheers CSS Grid layout met praktische voorbeelden en best practices. Leer hoe je responsieve layouts maakt zoals de professionals. Bekijk hoe <a href='https://jpwebcreation.nl/'>professionele webontwikkelaars</a> grid layouts implementeren in productie.",
+            "url": "2024-03-20-css-grid-gids.html"
+        },
+        {
+            "title": "JavaScript Prestatie Optimalisatie Technieken",
+            "date": "2024-03-18",
+            "preview": "Ontdek essentiële technieken voor het optimaliseren van je JavaScript code. Van geheugenbeheer tot efficiënte DOM-manipulatie, leer hoe je je webapplicaties sneller maakt. Bekijk praktijkvoorbeelden van <a href='https://jpwebcreation.nl/'>ervaren ontwikkelaars</a>.",
+            "url": "2024-03-18-javascript-optimalisatie.html"
+        },
+        {
+            "title": "Toegankelijke Webformulieren Bouwen",
+            "date": "2024-03-16",
+            "preview": "Leer hoe je webformulieren maakt die toegankelijk zijn voor alle gebruikers. We behandelen ARIA-labels, toetsenbordnavigatie en formuliervalidatie.",
+            "url": "2024-03-16-toegankelijke-formulieren.html"
+        },
+        {
+            "title": "Aan de slag met React Hooks",
+            "date": "2024-03-14",
+            "preview": "Een uitgebreide introductie tot React Hooks. Leer hoe je useState, useEffect en custom hooks gebruikt om betere React applicaties te bouwen.",
+            "url": "2024-03-14-react-hooks-basis.html"
+        },
+        {
+            "title": "Responsive Design Best Practices 2024",
+            "date": "2024-03-12",
+            "preview": "Blijf up-to-date met de nieuwste responsive design technieken. Van mobile-first design tot CSS container queries, we behandelen alles.",
+            "url": "2024-03-12-responsive-design-praktijken.html"
+        },
+        {
+            "title": "Web Security Fundamenten",
+            "date": "2024-03-10",
+            "preview": "Essentiële beveiligingspraktijken die elke webontwikkelaar moet kennen. Leer over XSS, CSRF en andere veelvoorkomende beveiligingskwetsbaarheden.",
+            "url": "2024-03-10-web-beveiliging.html"
+        },
+        {
+            "title": "Moderne CSS Features die je zou moeten gebruiken",
+            "date": "2024-03-08",
+            "preview": "Verken de nieuwste CSS-functies die webontwikkeling makkelijker maken. Van custom properties tot logical properties, verbeter je CSS-vaardigheden.",
+            "url": "2024-03-08-moderne-css.html"
+        },
+        {
+            "title": "TypeScript voor JavaScript Ontwikkelaars",
+            "date": "2024-03-06",
+            "preview": "Maak de overstap van JavaScript naar TypeScript. Leer over type systemen, interfaces en hoe je TypeScript geleidelijk kunt implementeren in je projecten.",
+            "url": "2024-03-06-typescript-gids.html"
+        },
+        {
+            "title": "Web Performance Optimalisatie Gids",
+            "date": "2024-03-04",
+            "preview": "Leer hoe je de prestaties van je website optimaliseert. Van beeldoptimalisatie tot lazy loading, ontdek technieken om je site sneller te maken.",
+            "url": "2024-03-04-prestatie-optimalisatie.html"
+        },
+        {
+            "title": "Beginnen met Next.js",
+            "date": "2024-03-02",
+            "preview": "Bouw moderne webapplicaties met Next.js. Leer over server-side rendering, static site generation en API routes.",
+            "url": "2024-03-02-nextjs-basis.html"
+        }
+    ]
+} 

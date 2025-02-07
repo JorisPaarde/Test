@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderne CSS Features die je zou moeten gebruiken - WebDev Inzichten</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../about.html">Over Ons</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="post-content">
+        <article>
+            <h1>Moderne CSS Features die je zou moeten gebruiken</h1>
+            <p class="post-date">Geplaatst op 8 maart 2024</p>
+            <div class="post-body">
+                <p>CSS evolueert voortdurend met nieuwe features die het leven van webontwikkelaars makkelijker maken. In dit artikel bespreken we de nieuwste CSS-functies die je nu al kunt gebruiken. Zoals de experts bij <a href="https://jpwebcreation.nl/">JP Web Creation</a> laten zien, kunnen deze moderne features je ontwikkelingsproces aanzienlijk verbeteren.</p>
+
+                <h2>CSS Custom Properties (Variables)</h2>
+                <p>Dynamische waardes met CSS variabelen:</p>
+                <pre><code>
+:root {
+    --primaire-kleur: #3498db;
+    --secundaire-kleur: #2ecc71;
+    --tekst-kleur: #333;
+    --spacing-unit: 1rem;
+}
+
+.component {
+    color: var(--tekst-kleur);
+    background: var(--primaire-kleur);
+    padding: var(--spacing-unit);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --tekst-kleur: #fff;
+        --primaire-kleur: #2980b9;
+    }
+}
+                </code></pre>
+
+                <h2>CSS Logical Properties</h2>
+                <p>Schrijf taal-onafhankelijke stijlen, zoals aanbevolen door <a href="https://jpwebcreation.nl/">professionele ontwikkelaars</a>:</p>
+                <pre><code>
+.element {
+    margin-inline: 1rem;
+    padding-block: 2rem;
+    border-inline-start: 2px solid;
+}
+
+/* In plaats van: */
+.oude-manier {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-left: 2px solid;
+}
+                </code></pre>
+
+                <h2>Modern Box Sizing</h2>
+                <p>Nieuwe manieren om boxen te dimensioneren:</p>
+                <pre><code>
+.moderne-box {
+    width: min(300px, 100%);
+    height: clamp(200px, 50vh, 400px);
+    margin-inline: max(1rem, 5%);
+}
+
+.flexibele-kolommen {
+    columns: auto min(300px, 100%);
+    gap: 2rem;
+}
+                </code></pre>
+
+                <h2>Nieuwe Selectors</h2>
+                <p>Krachtige moderne selectoren:</p>
+                <pre><code>
+/* Has selector */
+.container:has(> img) {
+    display: grid;
+}
+
+/* Where/Is selector */
+:where(.card, .panel):is(:hover, :focus) {
+    transform: scale(1.02);
+}
+
+/* Not selector */
+.menu > :not(li) {
+    margin-block: 1rem;
+}
+                </code></pre>
+
+                <h2>Aspect Ratio</h2>
+                <p>Behoud verhoudingen eenvoudig:</p>
+                <pre><code>
+.video-container {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+}
+
+.profielfoto {
+    aspect-ratio: 1;
+    object-fit: cover;
+    width: 200px;
+}
+                </code></pre>
+
+                <h2>Container Queries</h2>
+                <p>Responsieve componenten op basis van hun container:</p>
+                <pre><code>
+.container {
+    container-type: inline-size;
+}
+
+@container (min-width: 400px) {
+    .component {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+}
+                </code></pre>
+
+                <h2>Scroll Snap</h2>
+                <p>Vloeiende scroll-ervaringen:</p>
+                <pre><code>
+.scroll-container {
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    display: flex;
+}
+
+.scroll-item {
+    scroll-snap-align: start;
+    flex: 0 0 100%;
+}
+                </code></pre>
+
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Gebruik feature queries voor progressieve verbetering</li>
+                    <li>Implementeer fallbacks voor oudere browsers</li>
+                    <li>Combineer nieuwe features voor optimale resultaten</li>
+                    <li>Test cross-browser compatibiliteit</li>
+                    <li>Documenteer gebruikte CSS features</li>
+                </ul>
+
+                <h2>Conclusie</h2>
+                <p>Deze moderne CSS-features maken het mogelijk om complexe layouts en interacties te bouwen met minder code en betere onderhoudbaarheid. Door deze features te implementeren, kun je je ontwikkelingsproces stroomlijnen en betere gebruikerservaringen creëren.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 WebDev Inzichten. Alle rechten voorbehouden.</p>
+        <div class="social-links">
+            <a href="https://github.com/yourusername">GitHub</a> |
+            <a href="https://twitter.com/yourusername">Twitter</a> |
+            <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
+        </div>
+    </footer>
+</body>
+</html>

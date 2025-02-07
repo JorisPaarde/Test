@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
+    <title>WebDev Inzichten - Modern Web Development Blog</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,38 +11,29 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="about.html">Over Ons</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <main>
-        <h1>Welcome to my Blog</h1>
+        <h1>WebDev Inzichten</h1>
+        <div class="blog-description">
+            <p>Welkom bij WebDev Inzichten, waar we moderne webontwikkeling verkennen met praktische tips en technieken. Van beginnerstutorials tot geavanceerde concepten, wij helpen je betere websites te bouwen en te groeien als ontwikkelaar.</p>
+        </div>
         
         <section class="blog-posts">
-            <article class="post-preview">
-                <h2>Sample Blog Post 1</h2>
-                <p class="post-date">Posted on March 15, 2024</p>
-                <p>This is a preview of your first blog post. Click to read more...</p>
-                <a href="posts/post1.html">Read More</a>
-            </article>
-
-            <article class="post-preview">
-                <h2>Sample Blog Post 2</h2>
-                <p class="post-date">Posted on March 10, 2024</p>
-                <p>This is a preview of your second blog post. Click to read more...</p>
-                <a href="posts/post2.html">Read More</a>
-            </article>
+            <!-- Posts worden dynamisch hier ingevoegd -->
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 My Blog. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://github.com/yourusername">GitHub</a> |
-            <a href="https://twitter.com/yourusername">Twitter</a> |
-            <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
-        </div>
+        <p>&copy; <span id="copyright-year"></span> WebDev Inzichten. Alle rechten voorbehouden.</p>
     </footer>
+
+    <script>
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+    <script src="js/blog.js"></script>
 </body>
 </html>

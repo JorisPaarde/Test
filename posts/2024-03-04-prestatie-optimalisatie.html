@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Performance Optimalisatie Gids - WebDev Inzichten</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../about.html">Over Ons</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="post-content">
+        <article>
+            <h1>Web Performance Optimalisatie Gids</h1>
+            <p class="post-date">Geplaatst op 4 maart 2024</p>
+            <div class="post-body">
+                <p>Websiteprestaties zijn cruciaal voor een goede gebruikerservaring en SEO. In deze gids delen we bewezen technieken om je website te optimaliseren. Zoals de experts bij <a href="https://jpwebcreation.nl/">JP Web Creation</a> laten zien, kan een goed geoptimaliseerde website het verschil maken tussen succes en falen.</p>
+
+                <h2>Afbeeldingsoptimalisatie</h2>
+                <p>Optimaliseer afbeeldingen voor snelle laadtijden, zoals aanbevolen door <a href="https://jpwebcreation.nl/">professionele ontwikkelaars</a>:</p>
+                <pre><code>
+&lt;picture>
+    &lt;source 
+        srcset="afbeelding-small.webp 300w,
+                afbeelding-medium.webp 600w,
+                afbeelding-large.webp 900w"
+        sizes="(max-width: 320px) 300px,
+               (max-width: 640px) 600px,
+               900px"
+        type="image/webp"
+    >
+    &lt;img 
+        src="afbeelding-fallback.jpg"
+        alt="Beschrijving"
+        loading="lazy"
+        width="900"
+        height="600"
+    >
+&lt;/picture>
+                </code></pre>
+
+                <h2>JavaScript Optimalisatie</h2>
+                <p>Laad JavaScript efficiënt:</p>
+                <pre><code>
+// Dynamisch importeren van modules
+const loadModule = async () => {
+    if (condition) {
+        const module = await import('./module.js');
+        module.init();
+    }
+};
+
+// Defer niet-kritieke scripts
+&lt;script defer src="niet-kritiek.js">&lt;/script>
+                </code></pre>
+
+                <h2>CSS Optimalisatie</h2>
+                <p>Optimaliseer je CSS delivery:</p>
+                <pre><code>
+// Kritieke CSS inline
+&lt;style>
+    /* Alleen CSS nodig voor above-the-fold content */
+    .header {
+        /* Kritieke stijlen */
+    }
+&lt;/style>
+
+// Rest van CSS asynchroon laden
+&lt;link 
+    rel="preload" 
+    href="styles.css" 
+    as="style" 
+    onload="this.onload=null;this.rel='stylesheet'"
+>
+                </code></pre>
+
+                <h2>Caching Strategieën</h2>
+                <p>Implementeer effectieve caching:</p>
+                <pre><code>
+// Service Worker caching
+const CACHE_NAME = 'site-cache-v1';
+const urlsToCache = [
+    '/',
+    '/styles/main.css',
+    '/scripts/app.js'
+];
+
+self.addEventListener('install', event => {
+    event.waitUntil(
+        caches.open(CACHE_NAME)
+            .then(cache => cache.addAll(urlsToCache))
+    );
+});
+                </code></pre>
+
+                <h2>Resource Hints</h2>
+                <p>Gebruik resource hints voor snellere laadtijden:</p>
+                <pre><code>
+&lt;link rel="preconnect" href="https://api.example.com">
+&lt;link rel="preload" href="kritiek.js" as="script">
+&lt;link rel="prefetch" href="volgende-pagina.html">
+                </code></pre>
+
+                <h2>Core Web Vitals Optimalisatie</h2>
+                <ul>
+                    <li>Largest Contentful Paint (LCP) &lt; 2.5s</li>
+                    <li>First Input Delay (FID) &lt; 100ms</li>
+                    <li>Cumulative Layout Shift (CLS) &lt; 0.1</li>
+                </ul>
+
+                <h2>Performance Monitoring</h2>
+                <pre><code>
+// Performance metingen
+performance.mark('start');
+
+// Code die je wilt meten
+
+performance.mark('end');
+performance.measure('operatie', 'start', 'end');
+
+const metrics = performance.getEntriesByType('measure');
+console.log(metrics[0].duration);
+                </code></pre>
+
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Minimaliseer server response tijd</li>
+                    <li>Optimaliseer kritiek renderpad</li>
+                    <li>Implementeer progressieve verbetering</li>
+                    <li>Gebruik een CDN voor statische assets</li>
+                    <li>Monitor prestaties in het veld</li>
+                </ul>
+
+                <h2>Conclusie</h2>
+                <p>Prestatie-optimalisatie is een doorlopend proces dat constante aandacht vereist. Door deze technieken te implementeren en regelmatig te monitoren, kun je ervoor zorgen dat je website optimaal presteert voor alle gebruikers.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 WebDev Inzichten. Alle rechten voorbehouden.</p>
+        <div class="social-links">
+            <a href="https://github.com/yourusername">GitHub</a> |
+            <a href="https://twitter.com/yourusername">Twitter</a> |
+            <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
+        </div>
+    </footer>
+</body>
+</html>

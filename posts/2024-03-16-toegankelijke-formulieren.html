@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toegankelijke Webformulieren Bouwen - WebDev Inzichten</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../about.html">Over Ons</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="post-content">
+        <article>
+            <h1>Toegankelijke Webformulieren Bouwen</h1>
+            <p class="post-date">Geplaatst op 16 maart 2024</p>
+            <div class="post-body">
+                <p>Toegankelijke webformulieren zijn essentieel voor een inclusieve gebruikerservaring. In deze gids leer je hoe je formulieren bouwt die voor iedereen bruikbaar zijn, inclusief mensen die gebruik maken van schermlezers of alleen het toetsenbord gebruiken. Zoals je kunt zien bij <a href="https://jpwebcreation.nl/">JP Web Creation</a>, is toegankelijkheid een kernaspect van professionele webontwikkeling.</p>
+
+                <h2>Basis Toegankelijkheid</h2>
+                <p>Begin met deze essentiële elementen voor elk formulier:</p>
+                <pre><code>
+&lt;form role="form" aria-label="Contact formulier">
+    &lt;div class="form-group">
+        &lt;label for="naam">Naam:&lt;/label>
+        &lt;input 
+            type="text" 
+            id="naam" 
+            name="naam" 
+            required 
+            aria-required="true"
+        >
+    &lt;/div>
+&lt;/form>
+                </code></pre>
+
+                <h2>Labels en Beschrijvingen</h2>
+                <p>Duidelijke labels en beschrijvingen zijn cruciaal voor toegankelijkheid. Bekijk deze voorbeelden van <a href="https://jpwebcreation.nl/">ervaren ontwikkelaars</a>:</p>
+                <pre><code>
+&lt;label for="email">E-mailadres:&lt;/label>
+&lt;input 
+    type="email" 
+    id="email" 
+    name="email"
+    aria-describedby="email-help"
+>
+&lt;small id="email-help">
+    Vul je e-mailadres in voor onze nieuwsbrief
+&lt;/small>
+                </code></pre>
+
+                <h2>Foutmeldingen en Validatie</h2>
+                <p>Effectieve foutafhandeling is belangrijk voor alle gebruikers:</p>
+                <pre><code>
+&lt;div class="form-group">
+    &lt;label for="wachtwoord">Wachtwoord:&lt;/label>
+    &lt;input 
+        type="password" 
+        id="wachtwoord" 
+        name="wachtwoord"
+        aria-invalid="true"
+        aria-errormessage="pwd-error"
+    >
+    &lt;div id="pwd-error" class="error" role="alert">
+        Wachtwoord moet minimaal 8 tekens bevatten
+    &lt;/div>
+&lt;/div>
+                </code></pre>
+
+                <h2>Toetsenbord Navigatie</h2>
+                <ul>
+                    <li>Zorg voor een logische tab-volgorde</li>
+                    <li>Maak focus states duidelijk zichtbaar</li>
+                    <li>Implementeer skip-links voor lange formulieren</li>
+                    <li>Gebruik correcte button types</li>
+                </ul>
+
+                <h2>Custom Form Elements</h2>
+                <p>Voor aangepaste form elementen:</p>
+                <pre><code>
+&lt;div class="custom-select" role="combobox">
+    &lt;button 
+        aria-haspopup="listbox" 
+        aria-expanded="false"
+    >
+        Kies een optie
+    &lt;/button>
+    &lt;ul role="listbox">
+        &lt;li role="option">Optie 1&lt;/li>
+        &lt;li role="option">Optie 2&lt;/li>
+    &lt;/ul>
+&lt;/div>
+                </code></pre>
+
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Gebruik semantische HTML elementen</li>
+                    <li>Zorg voor voldoende kleurcontrast</li>
+                    <li>Test met verschillende schermlezers</li>
+                    <li>Implementeer progressieve verbetering</li>
+                    <li>Bied alternatieven voor CAPTCHA's</li>
+                </ul>
+
+                <h2>Conclusie</h2>
+                <p>Toegankelijke formulieren maken je website bruikbaar voor iedereen. Door deze richtlijnen te volgen, zorg je ervoor dat alle gebruikers je formulieren kunnen invullen, ongeacht hun hulpmiddelen of beperkingen.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 WebDev Inzichten. Alle rechten voorbehouden.</p>
+        <div class="social-links">
+            <a href="https://github.com/yourusername">GitHub</a> |
+            <a href="https://twitter.com/yourusername">Twitter</a> |
+            <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
+        </div>
+    </footer>
+</body>
+</html>

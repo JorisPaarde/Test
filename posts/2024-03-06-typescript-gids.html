@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript voor JavaScript Ontwikkelaars - WebDev Inzichten</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../about.html">Over Ons</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="post-content">
+        <article>
+            <h1>TypeScript voor JavaScript Ontwikkelaars</h1>
+            <p class="post-date">Geplaatst op 6 maart 2024</p>
+            <div class="post-body">
+                <p>TypeScript wordt steeds populairder onder webontwikkelaars. In deze gids leer je hoe je TypeScript kunt integreren in je JavaScript-projecten. Zoals de experts bij <a href="https://jpwebcreation.nl/">JP Web Creation</a> demonstreren, kan TypeScript je codebase robuuster en beter onderhoudbaar maken.</p>
+
+                <h2>Basis Types</h2>
+                <p>Begin met de fundamentele types in TypeScript:</p>
+                <pre><code>
+// Basis types
+let naam: string = "Jan";
+let leeftijd: number = 30;
+let isActief: boolean = true;
+let getallen: number[] = [1, 2, 3];
+let tuple: [string, number] = ["test", 42];
+
+// Union types
+let idNummer: string | number;
+idNummer = "A123"; // OK
+idNummer = 456;    // Ook OK
+                </code></pre>
+
+                <h2>Interfaces en Types</h2>
+                <p>Definieer duidelijke contracten voor je data, zoals aanbevolen door <a href="https://jpwebcreation.nl/">professionele ontwikkelaars</a>:</p>
+                <pre><code>
+interface Gebruiker {
+    id: number;
+    naam: string;
+    email: string;
+    leeftijd?: number; // Optioneel veld
+}
+
+type ApiResponse<T> = {
+    data: T;
+    status: number;
+    message: string;
+}
+
+// Gebruik
+const gebruiker: Gebruiker = {
+    id: 1,
+    naam: "Anna",
+    email: "anna@voorbeeld.nl"
+};
+                </code></pre>
+
+                <h2>Functies in TypeScript</h2>
+                <p>Typeer je functies voor betere veiligheid:</p>
+                <pre><code>
+// Functie met type annotaties
+function berekenTotaal(
+    prijzen: number[],
+    btw: number = 0.21
+): number {
+    return prijzen.reduce((sum, prijs) => 
+        sum + prijs * (1 + btw), 0
+    );
+}
+
+// Arrow functie met interface
+interface ZoekOpties {
+    term: string;
+    limiet?: number;
+}
+
+const zoekGebruikers = async (
+    opties: ZoekOpties
+): Promise<Gebruiker[]> => {
+    // Implementatie hier
+};
+                </code></pre>
+
+                <h2>Classes en OOP</h2>
+                <p>Object-georiënteerd programmeren in TypeScript:</p>
+                <pre><code>
+class Voertuig {
+    protected merk: string;
+
+    constructor(merk: string) {
+        this.merk = merk;
+    }
+
+    public rijden(): void {
+        console.log(`${this.merk} rijdt`);
+    }
+}
+
+class Auto extends Voertuig {
+    private deuren: number;
+
+    constructor(merk: string, deuren: number) {
+        super(merk);
+        this.deuren = deuren;
+    }
+}
+                </code></pre>
+
+                <h2>Generics</h2>
+                <p>Maak herbruikbare componenten met generics:</p>
+                <pre><code>
+function eersteElement<T>(array: T[]): T | undefined {
+    return array[0];
+}
+
+// Generieke klasse
+class Queue<T> {
+    private data: T[] = [];
+
+    push(item: T): void {
+        this.data.push(item);
+    }
+
+    pop(): T | undefined {
+        return this.data.shift();
+    }
+}
+                </code></pre>
+
+                <h2>Type Guards en Type Assertions</h2>
+                <p>Veilig werken met types:</p>
+                <pre><code>
+// Type guard
+function isString(waarde: any): waarde is string {
+    return typeof waarde === "string";
+}
+
+// Type assertion
+const canvas = document.getElementById("canvas") as 
+    HTMLCanvasElement;
+
+// Instanceof check
+if (error instanceof Error) {
+    console.log(error.message);
+}
+                </code></pre>
+
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Begin met strikte TypeScript configuratie</li>
+                    <li>Gebruik interfaces voor object shapes</li>
+                    <li>Vermijd 'any' waar mogelijk</li>
+                    <li>Implementeer geleidelijk in bestaande projecten</li>
+                    <li>Maak gebruik van TypeScript's type inference</li>
+                </ul>
+
+                <h2>Conclusie</h2>
+                <p>TypeScript biedt een robuuste laag bovenop JavaScript die je helpt om betrouwbaardere en beter onderhoudbare applicaties te bouwen. Door TypeScript geleidelijk te implementeren en de juiste practices te volgen, kun je de voordelen maximaliseren terwijl je de leercurve beheersbaar houdt.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 WebDev Inzichten. Alle rechten voorbehouden.</p>
+        <div class="social-links">
+            <a href="https://github.com/yourusername">GitHub</a> |
+            <a href="https://twitter.com/yourusername">Twitter</a> |
+            <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
+        </div>
+    </footer>
+</body>
+</html>
