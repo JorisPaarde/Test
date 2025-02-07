@@ -1,6 +1,6 @@
 async function loadBlogPosts() {
     try {
-        const response = await fetch('/posts/posts.json');
+        const response = await fetch('../posts/posts.json');
         const data = await response.json();
         
         const blogPostsSection = document.querySelector('.blog-posts');
